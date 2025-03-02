@@ -21,7 +21,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\LoEng.Server.Application\LoEng.Server.Application.csproj" />
-    <ProjectReference Include="..\LogEng.Server.BusinessObjects\LogEng.Server.Infrastructure.csproj" />
+    <ProjectReference Include="..\LoEng.Server.Infrastructure\LoEng.Server.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

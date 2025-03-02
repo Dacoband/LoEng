@@ -1,10 +1,15 @@
 using LoEng.Server.Domain.Interfaces;
+using LoEng.Server.Infrastructure.Data;
 using LoEng.Server.Infrastructure.Repositories;
 using LoEng.Server.Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Add database context to the container
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 //Add repositories to the container

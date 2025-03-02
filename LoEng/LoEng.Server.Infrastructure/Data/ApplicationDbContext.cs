@@ -28,22 +28,6 @@ public partial class ApplicationDbContext : DbContext
     public virtual DbSet<WordTag> WordTags { get; set; }
     public virtual DbSet<WordType> WordTypes { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseSqlServer(GetConnectionString());
-        }
-    }
-
-    private string? GetConnectionString()
-    {
-        IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true).Build();
-        return configuration["ConnectionStrings:DefaultConnection"];
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Cấu hình Example
