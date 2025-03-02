@@ -5,11 +5,11 @@ namespace LoEng.Server.Domain.Entities;
 
 public partial class UserWord
 {
-    public int UserWordId { get; set; }
+    public Guid UserWordId { get; set; }
 
-    public int? UserId { get; set; }
+    public Guid? UserId { get; set; }
 
-    public int? WordId { get; set; }
+    public Guid? WordId { get; set; }
 
     public bool? IsLearned { get; set; }
 

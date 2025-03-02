@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LoEng.Server.Application.DTOs.User
 {
-    internal class UserDTO
+    public class UserDTO
     {
+
     }
 }
