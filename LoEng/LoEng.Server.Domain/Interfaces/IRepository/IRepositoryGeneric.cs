@@ -5,16 +5,16 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoEng.Server.Domain.Interfaces
+namespace LoEng.Server.Domain.Interfaces.IRepository
 {
     public interface IRepositoryGeneric<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync();
-        Task<T> GetByIdAsync(int id);
+        Task<T> GetByIdAsync(Guid id);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(Guid id);
         Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate);
     }
 }

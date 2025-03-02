@@ -13,9 +13,9 @@ public partial class User
 
     public string PasswordHash { get; set; } = null!;
 
-    public DateTime? CreatedDate { get; set; } = DateTime.Now;
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-    public DateTime? UpdatedDate { get; set; } = DateTime.Now;
+    public DateTime UpdatedDate { get; set; } = DateTime.Now;
 
     public bool? DelFlg { get; set; }
 
