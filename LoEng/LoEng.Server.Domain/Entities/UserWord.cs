@@ -21,7 +21,7 @@ public partial class UserWord
 
     public bool? DelFlg { get; set; }
 
-    public int? LevelId { get; set; }
+    public Guid? LevelId { get; set; }
 
     public virtual Level? Level { get; set; }
 

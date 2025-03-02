@@ -4,7 +4,7 @@ using LoEng.Server.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace LogEng.Server.Infrastructure.Data;
+namespace LoEng.Server.Infrastructure.Data;
 
 public partial class ApplicationDbContext : DbContext
 {
@@ -41,7 +41,7 @@ public partial class ApplicationDbContext : DbContext
         IConfiguration configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", true, true).Build();
-        return configuration["ConnectionStrings:DefaultConnectionStringDB"];
+        return configuration["ConnectionStrings:DefaultConnection"];
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

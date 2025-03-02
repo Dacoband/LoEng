@@ -1,5 +1,5 @@
 ﻿using LoEng.Server.Domain.Interfaces;
-using LogEng.Server.Infrastructure.Data;
+using LoEng.Server.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogEng.Server.Infrastructure.Repositories
+namespace LoEng.Server.Infrastructure.Repositories
 {
     public class RepositoryGeneric<T> : IRepositoryGeneric<T> where T : class
     {
